@@ -37,3 +37,27 @@ until (( b >= a)); do
 done
 ```
 
+# string manipulation
+```sh
+# find length of string
+echo ${#string}
+
+# substring
+# #echo ${string:start_index:length}
+string="my array"
+echo ${string:3:5} # => array
+```
+
+
+# text manipulation
+basic text manipulation tools are
+- cut -> extract specific columns
+- sed -> finding and replacing pattern
+- awk -> scanning and processing
+- tr -> translate or delete characters
+- grep -> finding pattern
+
+
+```sh
+
+```
