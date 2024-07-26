@@ -37,6 +37,33 @@ until (( b >= a)); do
 done
 ```
 
+
+# functions
+```sh
+function count(){
+  for num in {1..10}; do
+    echo $num
+    sleep 1
+  done
+}
+
+count_to_10
+
+# sending parameters
+function count(){
+  count=1
+  while (($count < $1)); do
+    echo $count
+    count=$((++count))
+  done
+}
+
+
+count 5
+```
+
+
+
 # string manipulation
 ```sh
 # find length of string
