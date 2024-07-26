@@ -24,3 +24,36 @@
 #   echo $b
 #   b=$((b+1))
 # done
+
+
+# Guessing game for 10 attempts
+# $RANDOM for generating random number
+
+# generate number less than 100
+random=$RANDOM
+userCount=0
+isWon=false
+until [[ random -le 100 ]]; do
+  random=$RANDOM
+done
+
+while [[ userCount -lt 10 ]]; do
+  read -p "guess number between 1 - 100: " -n 2 userInput  
+  if [[ $userInput -eq $random ]]; then
+    echo "YOu WIN"
+    isWon=true
+    break
+  fi
+  userCount=$((++userCount)) # not var++
+done
+
+
+# # calling a variable inside if
+# if [[ ! $($isWon) ]]; then
+# or
+if ((! $isWon)); then
+  echo "YOU LOOSE!"
+  echo "number is ${random}"
+fi
+
+

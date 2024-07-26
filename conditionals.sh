@@ -1,6 +1,8 @@
 #!/bin/bash
 
 
+# notes
+
 # if case
 # -gt => greater than
 # -lt => less than
@@ -8,6 +10,19 @@
 # -le => less or equal
 # -eq => equal
 # -ne => not equal
+
+
+# bitwise    logical
+# & => and     &&
+# | => or      ||
+# ! => not      ! 
+
+# #so you can also write if conditions as
+# a=5
+# b=6
+# if (($a != $b)); then
+#   echo " a is not equal to b"
+# fi
 
 
 # -p prompt: instead on taking input on the next line you can take here itself
@@ -31,6 +46,7 @@
 
 # # tr is translate, from capitals to lowercase from variable option
 # # can't use << as it takes it as string so use <<< to send input
+# # and no ${} for string interpolation, to run command on variables use $() 
 # option=$(tr 'A-Z' 'a-z' <<< $option)
 
 
@@ -45,4 +61,7 @@
 #     echo 'invalid option ${option}' #litral string
 #     ;;
 # esac
+
+
+
 
