@@ -16,6 +16,12 @@ do
 done
 
 
+# # iterating files
+# for files in path/to/dir/*.txt
+# do
+#   cat $files
+# done
+
 
 # # while loop
 # while [[ a -le 5 ]]; do
